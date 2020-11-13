@@ -1,8 +1,6 @@
 package models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
@@ -13,7 +11,7 @@ import javax.persistence.UniqueConstraint;
 public class Product {
 	
 	@Id
-	@Column(name="barcode")
+	@Column(name="barcode", length=100)
 	private String barcode;
 	
 	@Column(name="name")
