@@ -1,12 +1,8 @@
 package with.jpa;
 import java.io.PrintWriter;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.io.IOException;
 import javax.servlet.*;
 import javax.servlet.http.*;
-
-import org.hibernate.exception.ConstraintViolationException;
-
 import dao.ProductDao;
 import models.Product;
 import welcome.Welcome;
@@ -19,6 +15,7 @@ public class AddProductWithJpa extends HttpServlet {
 	@Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		
         try {
         	
             String barcode = request.getParameter("barcode");
@@ -30,9 +27,9 @@ public class AddProductWithJpa extends HttpServlet {
             ProductDao thisProductDao = Welcome.getProductDao();
             
             // save the product to database. All the magic happens in the next lines
-            Product product = new Product(barcode, name, color, description);
+            Product product = new Product(barcode, name, color, description);            
             thisProductDao.saveProduct(product);
-
+                        
             PrintWriter out = response.getWriter();
             response.setContentType("text/html");
             

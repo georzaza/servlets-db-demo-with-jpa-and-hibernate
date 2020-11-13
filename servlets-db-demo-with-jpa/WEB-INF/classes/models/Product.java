@@ -13,10 +13,6 @@ import javax.persistence.UniqueConstraint;
 public class Product {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
-	private int id;
-	
 	@Column(name="barcode")
 	private String barcode;
 	
@@ -38,15 +34,6 @@ public class Product {
 	}
 	
 	public Product(String barcode, String name, String color, String description)	{
-		this.barcode = barcode;
-		this.name = name;
-		this.color = color;
-		this.description = description;
-	}
-	
-	public Product(int id, String barcode, String name, String color, String description)	{
-		super();
-		this.id = id;
 		this.barcode = barcode;
 		this.name = name;
 		this.color = color;
