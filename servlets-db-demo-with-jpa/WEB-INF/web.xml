@@ -1,0 +1,61 @@
+<web-app>
+  <description>Demo Database using Servlets</description>
+
+  <display-name>Demonstration of a Simple Database Webapp</display-name>
+
+  <servlet>
+    <servlet-name>Welcome</servlet-name>
+    <servlet-class>welcome.Welcome</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AllProductsNoJpa</servlet-name>
+    <servlet-class>no.jpa.AllProductsNoJpa</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddProductNoJpa</servlet-name>
+    <servlet-class>no.jpa.AddProductNoJpa</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AllProductsWithJpa</servlet-name>
+    <servlet-class>with.jpa.AllProductsWithJpa</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddProductWithJpa</servlet-name>
+    <servlet-class>with.jpa.AddProductWithJpa</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Welcome</servlet-name>
+    <url-pattern>/index.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Welcome</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AllProductsNoJpa</servlet-name>
+    <url-pattern>/all-products-no-jpa</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddProductNoJpa</servlet-name>
+    <url-pattern>/add-product-no-jpa</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AllProductsWithJpa</servlet-name>
+    <url-pattern>/all-products-with-jpa</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddProductWithJpa</servlet-name>
+    <url-pattern>/add-product-with-jpa</url-pattern>
+  </servlet-mapping>
+
+</web-app>
